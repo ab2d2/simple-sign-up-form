@@ -6,7 +6,8 @@ const initialState = {
   userName: '',
   email: '',
   password: '',
-  passwordConfirmation: ''
+  passwordConfirmation: '',
+  investmentInterest: false
 };
 
 const UserSignup = () => {
@@ -50,6 +51,16 @@ const UserSignup = () => {
         required
         onChange={handleChange}
       />
+      <label htmlFor='investmentInterest' className='UserSignup--checkbox'>
+        <input
+          id='investmentInterest'
+          name='investmentInterest'
+          type='checkbox'
+          checked={state.investmentInterest}
+          onChange={event => setState({investmentInterest: event.target.checked})}
+        />
+        Do you want to maybe help us out with an angel investment?
+      </label>
       <input type='Submit' />
     </form>
   );
