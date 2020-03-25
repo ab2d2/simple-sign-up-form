@@ -13,7 +13,13 @@ const UserSignup = () => {
     event.preventDefault();
     clear();
   };
-
+  /**
+   * in class component the equivalent of having one useState to keep track every form field will be:
+   * const handleChange = (event) => {
+   *  this.setState({[event.target.name]: event.target.value})
+   * }
+   * //and then give this handleChange event to all form fields 
+   */
   const clear = () => {
     setUserName('');
     setEmail('');
